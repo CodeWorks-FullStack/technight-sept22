@@ -1,0 +1,89 @@
+:root {
+  --primary: #0A1833;
+  --parchment: #F8F0E5;
+  --secondary: #CDEAF0;
+}
+
+header,
+footer {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
+
+header .left-side{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.shopkeeper {
+  background-image: url(assets/img/hero-image.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopkeeper-text {
+  background-color: #a98c6cc2;
+  padding: 1.25rem;
+  margin-right: 3rem;
+  border-radius: 10px;
+  max-width: 80ch;
+}
+
+.shopkeeper-text h1 {
+  color: white;
+}
+
+
+.shopkeeper img {
+  transform: scaleX(-1);
+}
+
+
+
+/* NOTE the dot is used to create a class selector */
+.products {
+  background-color: var(--secondary);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  background-color: var(--parchment);
+  border-radius: 10px;
+  padding: 8px;
+  text-align: center;
+  max-width: 25vw;
+  margin: .5rem;
+}
+
+.product p {
+  text-align: left;
+  border-top: 1px solid var(--primary);
+  padding-top: 8px;
+  max-width: 80ch;
+}
+
+.product img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+footer {
+  text-align: center;
+}
