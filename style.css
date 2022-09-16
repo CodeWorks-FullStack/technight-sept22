@@ -22,8 +22,6 @@ header .left-side{
   align-items: center;
 }
 
-
-
 .shopkeeper {
   background-image: url(assets/img/hero-image.jpg);
   background-size: cover;
@@ -52,15 +50,9 @@ header .left-side{
   transform: scaleX(-1);
 }
 
-
-
 /* NOTE the dot is used to create a class selector */
 .products {
   background-color: var(--secondary);
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .product {
@@ -68,8 +60,7 @@ header .left-side{
   border-radius: 10px;
   padding: 8px;
   text-align: center;
-  max-width: 25vw;
-  margin: .5rem;
+  margin-bottom: .5rem;
 }
 
 .product p {
