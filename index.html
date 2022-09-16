@@ -74,11 +74,16 @@
   <div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="cartLabel">Your Cart</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" onclick="drawCart()"></button>
     </div>
-    <div class="offcanvas-body">
-      ...
+    <div class="offcanvas-body" id="cart-items">
+      
     </div>
+
+    <div>
+      <button class="btn btn-primary w-100 btn-lg square" onclick="clearCart()">Purchase Items</button>
+    </div>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"

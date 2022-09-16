@@ -68,7 +68,7 @@ products.forEach(p => {
         <img src="${p.imgUrl}" alt="Product Name" height="250">
         <h3>${p.name}</h3>
         <p>${p.description}</p>
-        <button class="btn btn-secondary">Add to Cart</button>
+        <button class="btn btn-secondary" onclick="addToCart('${p.id}')" data-bs-toggle="offcanvas" data-bs-target="#cart">Add to Cart</button>
       </div>
     </div>
     `
@@ -86,6 +86,43 @@ products.forEach(p => {
 
 // @ts-ignore
 document.getElementById('products').innerHTML = productsTemplates
+
+
+let cart = []
+
+
+function addToCart(productId) {
+  console.log('will it click??????', productId)
+
+  let product = products.find(p => p.id == productId)
+  console.log('what is this? ', product)
+
+  cart.push(product)
+  drawCart()
+}
+
+
+function drawCart() {
+  let cartTemplate = ''
+
+  cart.forEach(p => {
+    cartTemplate += /*html*/`
+    <div class="d-flex align-items-center justify-content-around p-3  border-bottom">
+      <img src="${p.imgUrl}" alt="${p.name}" height="125">
+      <h3 class="mb-0"><b>${p.name}</b></h3>
+    </div>
+    `
+  })
+
+  // @ts-ignore
+  document.getElementById('cart-items').innerHTML = cartTemplate
+}
+
+function clearCart(){
+  cart = []
+  drawCart()
+}
+
 
 
 

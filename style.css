@@ -78,3 +78,7 @@ header .left-side{
 footer {
   text-align: center;
 }
+
+.square{
+  border-radius: 0 !important;
+}
